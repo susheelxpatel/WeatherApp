@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app/views/weather_card.dart';
+import 'package:weather_app/src/views/weather_card.dart';
+
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
@@ -46,7 +47,7 @@ class HomePage extends StatelessWidget {
           return Container(
             height: 130,
             margin:
-                const EdgeInsets.only(bottom: 40, top: 10, left: 20, right: 20),
+            const EdgeInsets.only(bottom: 40, top: 10, left: 20, right: 20),
             decoration: BoxDecoration(
               gradient: const LinearGradient(
                 begin: Alignment.topRight,
@@ -77,8 +78,8 @@ class HomePage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (
-                      context,
-                    ) =>
+                        context,
+                        ) =>
                         WeatherCard(names: titles[index]),
                   ),
                 );
@@ -103,6 +104,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
           );
+
         },
       ),
     );

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:weather_app/models/theme_mode.dart';
-import 'package:weather_app/services/weather_service.dart';
-import 'package:weather_app/views/home_page.dart';
-import 'package:weather_app/views/settings_page.dart';
+import 'package:weather_app/src/models/theme_mode.dart';
+import 'package:weather_app/src/services/weather_service.dart';
+import 'package:weather_app/src/views/home_page.dart';
+import 'package:weather_app/src/views/settings_page.dart';
+
 
 void main() {
   runApp(MyApp());

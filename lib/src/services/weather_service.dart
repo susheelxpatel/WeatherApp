@@ -3,7 +3,8 @@ import 'dart:io';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
-import 'package:weather_app/models/weather.dart';
+import 'package:weather_app/src/models/weather.dart';
+
 
 class WeatherService with ChangeNotifier {
   final String apiKey = '372023e1efe6254807699d8f5a21c619';

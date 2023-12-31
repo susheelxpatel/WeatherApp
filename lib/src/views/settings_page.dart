@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:weather_app/models/theme_mode.dart';
+import 'package:weather_app/src/models/theme_mode.dart';
+
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});

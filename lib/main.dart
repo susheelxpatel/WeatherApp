@@ -1,0 +1,40 @@
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:weather_app/models/theme_mode.dart';
+import 'package:weather_app/services/weather_service.dart';
+import 'package:weather_app/views/home_page.dart';
+import 'package:weather_app/views/settings_page.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => WeatherService()),
+        ChangeNotifierProvider(create: (context) => ThemeProvider()),
+      ],
+      child: Consumer<ThemeProvider>(
+        builder: (context, themeProvider, _) {
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: 'Weather App',
+            theme: ThemeData.light(),
+            darkTheme: ThemeData.dark(),
+            themeMode:
+                themeProvider.isDarkMode ? ThemeMode.dark : ThemeMode.light,
+            home: HomePage(),
+            routes: {
+              '/settings': (context) => SettingsPage(),
+            },
+          );
+        },
+      ),
+    );
+  }
+}
